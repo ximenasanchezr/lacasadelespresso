@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <meta name="author" content="Devcrud">
+    <title>La Casa del Espresso | Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="../css/estilos.css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+//-->
+</script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- barra de navegación -->
+    <nav class="custom-navbar navbar navbar-expand-lg" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="valores.html">Valores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="encuesta.html">Encuesta</a>
+                </li>
+            </ul>
+            <a class="navbar-brand" href="#">
+                <img src="../imagenes/navbar.png" class="brand-img" alt="" height=100 />
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="menu.html" class="btn btn-primary">Menú</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<form action="" method="post" name="encuesta">
+    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+       
+            <h2 class="section-title mb-5">Encuesta de Satisfacción</h2>
+			
+			<div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="text" id="correo" name="Correo Electrónico" class="form-control form-control-lg custom-form-control" placeholder="Correo Electrónico">
+      </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="text" id="nombre" name="Nombre" class="form-control form-control-lg custom-form-control" placeholder="Nombre">
+                </div>
+            <HR>
+            <h3 class="section-title mb-5">Sobre la Experiencia General</h3>
+							<hr>
+
+            <p onClick="MM_popupMsg('(Escala de 1 a 5, donde 1 es \&quot;Muy mala\&quot; y 5 es \&quot;Excelente\&quot;)\r')">¿Cómo calificarías tu experiencia general en nuestra cafetería? (1-5)</p>
+            
+            <select name="experiencia_general" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>5</option>
+            <option value>4</option>
+            <option value>3</option>
+            <option value>2</option>
+            <option value>1</option>
+            </select>
+                
+				 <p>¿Con qué frecuencia visitas nuestra cafetería?</p>
+            
+            <select name="frecuencia" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Diariamente</option>
+            <option value>Semanalmente</option>
+            <option value>Mensualmenre</option>
+            <option value>Rara vez</option>
+            <option value>Es mi primera vez</option>
+            </select>
+			
+			 <p onClick="MM_popupMsg('(Escala de 1 a 5, donde 1 es \&quot;Muy mala\&quot; y 5 es \&quot;Excelente\&quot;)\r')">¿Cómo calificarías la amabilidad y cortesía de nuestro personal? (1-5)</p>
+            
+            <select name="amabilidad" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>5</option>
+            <option value>4</option>
+            <option value>3</option>
+            <option value>2</option>
+            <option value>1</option>
+            </select>
+			
+			<p>¿El tiempo de espera fue adecuado?
+</p>
+            
+            <select name="espera" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Sí, fue rápido</option>
+            <option value>Fue algo lento, pero aceptable</option>
+            <option value>Muy lento</option>
+            </select>
+			
+			<p>¿Recibiste el servicio de manera eficiente y sin errores?
+</p>
+            
+            <select name="errores" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Sí</option>
+            <option value>No</option>
+            </select>
+				<hr>
+				 <h3 class="section-title mb-5">Sobre la Calidad de los Productos</h3>
+				 				<hr>
+
+            <p onClick="MM_popupMsg('(Escala de 1 a 5, donde 1 es \&quot;Muy mala\&quot; y 5 es \&quot;Excelente\&quot;)\r')">¿Cómo calificarías la calidad de los productos que consumiste? (1-5)</p>
+            
+            <select name="calidad" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>5</option>
+            <option value>4</option>
+            <option value>3</option>
+            <option value>2</option>
+            <option value>1</option>
+            </select>
+			
+			<p>¿El café y otras bebidas estuvieron a la temperatura adecuada?</p>
+            
+            <select name="temperatura" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Sí</option>
+            <option value>No</option>
+            </select>
+			
+			<p>¿Estás satisfecho con la variedad de opciones en el menú?</p>
+            
+            <select name="variedad" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Sí</option>
+            <option value>No</option>
+            </select>
+                
+                <p onClick="MM_popupMsg('(Escala de 1 a 5, donde 1 es \&quot;Muy mala\&quot; y 5 es \&quot;Excelente\&quot;)\r')">¿Cómo calificarías el sabor de los productos que pediste? (1-5)</p>
+            
+            <select name="sabor" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>5</option>
+            <option value>4</option>
+            <option value>3</option>
+            <option value>2</option>
+            <option value>1</option>
+            </select>
+                
+                <HR>
+            <h3 class="section-title mb-5">Sobre el Ambiente</h3>
+							<hr>
+
+            <p>¿Cómo calificarías el ambiente en nuestra cafetería?</p>
+            
+            <select name="ambiente" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Muy acogedor</option>
+            <option value>Agradable</option>
+            <option value>Neutro</option>
+            <option value>No me gustó</option>
+            </select>
+				
+				<p>¿El lugar estaba limpio y ordenado durante tu visita?</p>
+            
+            <select name="limpieza" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Sí</option>
+            <option value>No</option>
+            </select>
+			
+			<p>¿Recomendarías nuestra cafetería a tus amigos y familiares?</p>
+            
+            <select name="recomendacion" class="form-control form-control-lg custom-form-control" placeholder="Califique la comida">
+            <option value>Sí</option>
+            <option value>No</option>
+            </select>
+			
+			<p>¿Tienes alguna sugerencia o comentario adicional?</p>
+  <textarea id="comentario" name="Comentario" class="form-control form-control-lg custom-form-control" rows="5" cols="40" placeholder="Escribe aquí..."></textarea><br><br>
+				
+				<br /><br />
+            <a href="#" class="btn btn-lg btn-primary" id="rounded-btn" onClick="MM_validateForm('correo','','RisEmail','nombre','','R','comentario','','R');return document.MM_returnValue">ENVIAR</a>
+            <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">REESTABLECER</a>
+			<br />
+			<br />
+  </div>
+    </div>
+</form>
